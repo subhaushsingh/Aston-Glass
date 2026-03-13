@@ -1,33 +1,21 @@
 export default function Navbar() {
   return (
-    <nav className="fixed w-full z-50 shadow-lg transition-all duration-300 text-white"
-      style={{ background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-        {/* Logo */}
-        <div className="text-2xl font-extrabold tracking-wider flex items-center gap-2">
-          <div className="w-8 h-8 bg-cyan-500 rounded-sm rotate-45 flex items-center justify-center shadow-lg shadow-cyan-500/50">
-            <div className="w-4 h-4 bg-white rounded-sm"></div>
+   <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-sm shadow-sm transition-all duration-300 text-gray-800">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+          <a href="#home" className="flex items-center">
+            <img src="/BIS LOGO AGPL website.png" alt="AGPL Astron Glass Logo" className="h-12 w-auto object-contain" />
+          </a>
+          <div className="hidden md:flex space-x-8 font-medium">
+            <a href="#home" className="hover:text-red-600 transition duration-300">Home</a>
+            <a href="#about" className="hover:text-red-600 transition duration-300">About Us</a>
+            <a href="#capabilities" className="hover:text-red-600 transition duration-300">Capabilities</a>
+            <a href="#services" className="hover:text-red-600 transition duration-300">Services</a>
+            <a href="#contact" className="hover:text-red-600 transition duration-300">Contact</a>
           </div>
-          Aston Glass
+          <a href="#contact" className="hidden md:inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg shadow-red-600/30 hover:shadow-red-700/50 transform hover:-translate-y-0.5">
+            Get a Quote
+          </a>
         </div>
-
-        {/* Nav Links */}
-        <div className="hidden md:flex space-x-8 font-medium">
-          {['Home', 'Capabilities', 'Services', 'Contact'].map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`}
-              className="hover:text-cyan-400 transition duration-300">
-              {item}
-            </a>
-          ))}
-        </div>
-
-        {/*  Buttons */}
-        <a href="#contact"
-          className="hidden md:inline-block bg-cyan-600 hover:bg-cyan-500 px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg shadow-cyan-600/30 hover:shadow-cyan-500/50 hover:-translate-y-0.5 transform">
-          Get a Quote
-        </a>
-      </div>
-    </nav>
+      </nav>
   )
 }
