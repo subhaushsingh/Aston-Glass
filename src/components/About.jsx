@@ -8,7 +8,7 @@ export default function About() {
               <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Our Company Story</h2>
               <div className="w-20 h-1.5 bg-red-600 rounded-full mb-8"></div>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                At <strong>Astron Glass Private Limited</strong>, we're passionate about delivering top-notch glass solutions for various applications. Since our inception in 2020, we've established ourselves as leading manufacturers of a wide range of toughened glasses, catering to diverse industries.
+                At <strong>Aston Glass Private Limited</strong>, we're passionate about delivering top-notch glass solutions for various applications. Since our inception in 2020, we've established ourselves as leading manufacturers of a wide range of toughened glasses, catering to diverse industries.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
                 Our expertise lies in crafting high-quality glasses for chimney organisations, corner serve bathroom accessories, pull-out drawers, tandem boxes, kitchen appliances, and OTG glasses. With in-house capabilities and a professional team, we're equipped to understand and meet our clients' unique needs.
