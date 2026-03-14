@@ -14,28 +14,31 @@ export default function Contact() {
               <div className="space-y-6 text-gray-200">
                 <div className="flex items-start">
                   <span className="text-red-500 text-xl mr-4 mt-1">📍</span>
-                  <p><strong>Factory:</strong><br/> Rajkot, Gujarat</p>
+                  <p><strong>Office:</strong><br/>Nr. Rangoli Hotel, Lohanagar Main Road,
+Gondal Road, Rajkot- 360004 (Gujarat) India. </p>
+                  <span className="text-red-500 text-xl mr-4 mt-1">📍</span>
+                  <p><strong>Factory:</strong><br/> Laxmi Estate, Survey No. 693, Plot No. 1A, Village: Khambha,
+Taluka: Lodhika, District: Rajkot - 365650 (Gujarat.) India.</p>
                 </div>
                 <div className="flex items-start">
                   <span className="text-red-500 text-xl mr-4 mt-1">📞</span>
                   <p>
-                    <strong>Phone:</strong><br/> 
-                    <a href="tel:+919876543210" className="text-pink-400 hover:text-red-500 transition-colors">+91 98765 43210</a> , 
-                    <a href="tel:+919831341021" className="text-pink-400 hover:text-red-500 transition-colors">+91 98313 41021</a>
+                    <strong>Phone:</strong><br/>  
+                    <a href="tel:+91 95120 11163" className="text-pink-400 hover:text-red-500 transition-colors">+91 95120 11163</a>
                   </p>
                 </div>
                 <div className="flex items-start">
                 <span className="text-red-500 text-xl mr-4 mt-1">💬</span>
                 <p>
                    <strong>WhatsApp:</strong><br/> 
-                   <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 98765 43210</a> 
+                   <a href="https://wa.me/+91 95120 11163" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 95120 11163</a> 
                  </p>  
                 </div>
                 <div className="flex items-start">
                   <span className="text-red-500 text-xl mr-4 mt-1">✉️</span>
                   <p>
                     <strong>Email:</strong><br/> 
-                    <a href="mailto:sales@astronglass.com" className="text-gray-400 hover:text-red-500 transition-colors">sales@astronglass.com</a>
+                    <a href="inq@astonglass.com" className="text-gray-400 hover:text-red-500 transition-colors">inq@astonglass.com</a>
                   </p>
                 </div>
               </div>
