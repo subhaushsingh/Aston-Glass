@@ -5,6 +5,7 @@ import About from './components/About'
 import Capabilities from './components/Capabilities'
 import Services from './components/Services'
 import Contact from './components/Contact'
+import Map from './components/Map'
 import Footer from './components/Footer'
 
 function Splash() {
@@ -68,6 +69,7 @@ export default function App() {
       <Capabilities />
       <Services />
       <Contact />
+      <Map />
       <Footer />
     </div>
   )
