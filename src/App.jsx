@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 import Capabilities from './components/Capabilities'
 import Services from './components/Services'
 import Contact from './components/Contact'
@@ -63,6 +64,7 @@ export default function App() {
     >
       <Navbar />
       <Hero />
+      <About />
       <Capabilities />
       <Services />
       <Contact />

@@ -1,62 +1,39 @@
-const capabilities = [
-  {
-    icon: '📏',
-    title: 'Thickness Range',
-    description: 'Capable of tempering glass from 4mm up to 19mm for diverse architectural and structural requirements.',
-  },
-  {
-    icon: '🏢',
-    title: 'Maximum Jumbo Size',
-    description: 'Our modern furnaces easily accommodate jumbo glass sheets up to an impressive 2440mm x 3660mm.',
-  },
-  {
-    icon: '🛡️',
-    title: 'Quality Compliance',
-    description: 'Rigorous fragmentation and impact testing ensuring complete adherence to global safety standards.',
-  },
-]
-
-function CapabilityCard({ icon, title, description }) {
-  return (
-    <div
-      className="bg-white p-10 rounded-2xl shadow-xl border-t-4 border-cyan-600 text-center relative overflow-hidden group"
-      style={{ transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)' }}
-      onMouseEnter={e => {
-        e.currentTarget.style.transform = 'translateY(-10px)'
-        e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(8,145,178,0.15), 0 10px 10px -5px rgba(8,145,178,0.05)'
-        e.currentTarget.style.borderTopColor = '#0891b2'
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.transform = 'translateY(0)'
-        e.currentTarget.style.boxShadow = ''
-        e.currentTarget.style.borderTopColor = '#0891b2'
-      }}
-    >
-      {/* Decorative corner bg */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform" />
-
-      <div className="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-        {icon}
-      </div>
-      <h3 className="text-2xl font-bold mb-3 text-slate-800">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </div>
-  )
-}
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-slate-900 mb-4">Manufacturing Capabilities</h2>
-        <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full" />
-      </div>
+  <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6 border-t border-gray-100">
+  <div className="text-center mb-16">
+    <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Manufacturing Capabilities</h2>
+    <div className="w-24 h-1.5 bg-gradient-to-r from-red-600 to-gray-400 mx-auto rounded-full"></div>
+  </div>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    {/* Tab 1 */}
+    <div className="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-red-600 text-center relative overflow-hidden group transform transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+      <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">📏</div>
+      <h3 className="text-2xl font-bold mb-3 text-gray-800">Thickness Range</h3>
+      <p className="text-gray-600 leading-relaxed">We have product ranging from 3.5mm up to 8mm, where we have 3.5mm and 4mm Grey Mirror and Reflective glasses for diverse architectural and structural requirements.</p>
+    </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {capabilities.map((cap) => (
-          <CapabilityCard key={cap.title} {...cap} />
-        ))}
-      </div>
-    </section>
+    {/* Tab 2 */}
+    <div className="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-red-600 text-center relative overflow-hidden group transform transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+      <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">🏢</div>
+      <h3 className="text-2xl font-bold mb-3 text-gray-800">Maximum Jumbo Size</h3>
+      <p className="text-gray-600 leading-relaxed">Our modern furnaces easily accommodate jumbo glass sheets up to an impressive 2440mm x 3660mm.</p>
+    </div>
+
+    {/* Tab 3 */}
+    <div className="bg-white p-10 rounded-2xl shadow-lg border-t-4 border-red-600 text-center relative overflow-hidden group transform transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+      <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">🛡️</div>
+      <h3 className="text-2xl font-bold mb-3 text-gray-800">Quality Compliance</h3>
+      <p className="text-gray-600 leading-relaxed">Rigorous fragmentation and impact testing ensuring complete adherence to global safety standards.</p>
+    </div>
+
+  </div>
+</section>
   )
 }
