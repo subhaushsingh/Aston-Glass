@@ -11,6 +11,7 @@ export default function Navbar() {
             <a href="#capabilities" className="hover:text-red-600 transition duration-300">Capabilities</a>
             <a href="#services" className="hover:text-red-600 transition duration-300">Services</a>
             <a href="#contact" className="hover:text-red-600 transition duration-300">Contact</a>
+            <a href="/Aston_Glass_Profile.pdf" download="Aston_Glass_Brochure.pdf" className="hover:text-red-600 transition duration-300"> Download Brochure</a>
           </div>
           <a href="#contact" className="hidden md:inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg shadow-red-600/30 hover:shadow-red-700/50 transform hover:-translate-y-0.5">
             Get a Quote
