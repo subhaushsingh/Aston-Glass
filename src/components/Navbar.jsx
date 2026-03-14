@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-   <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-sm shadow-sm transition-all duration-300 text-gray-800">
+   <nav className="fixed w-full z-50 bg-white/25 backdrop-blur-sm shadow-sm transition-all duration-300 text-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <a href="#home" className="flex items-center">
             <img src="/BIS LOGO AGPL website.png" alt="AGPL Astron Glass Logo" className="h-12 w-auto object-contain" />
