@@ -9,7 +9,7 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      const res = await fetch('http://localhost:5000/send', {
+      const res = await fetch('https://aston-glass-production.up.railway.app/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

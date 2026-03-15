@@ -55,6 +55,7 @@ app.post('/send', async (req, res) => {
     });
     res.json({ success: true });
   } catch (err) {
+    console.log('Mail error:', err.message);
     res.status(500).json({ success: false });
   }
 });
@@ -62,4 +63,4 @@ app.post('/send', async (req, res) => {
 
 app.get("/health", (req, res) => res.send("OK"))
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(process.env.PORT || 5000, () => console.log('Server running on port 5000'));
