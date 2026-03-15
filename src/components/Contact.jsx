@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const formRef = useRef();
@@ -9,23 +10,14 @@ export default function Contact() {
     setStatus('sending');
 
     try {
-      const res = await fetch('https://aston-glass-production.up.railway.app/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          company_name: formRef.current.company_name.value,
-          from_email: formRef.current.from_email.value,
-          message: formRef.current.message.value,
-        })
-      });
-
-      const data = await res.json();
-      if (data.success) {
-        setStatus('success');
-        formRef.current.reset();
-      } else {
-        setStatus('error');
-      }
+      await emailjs.sendForm(
+        'service_a85gtm2',
+        'template_f9ygb2s',
+        formRef.current,
+        'C04vNf3V3ipt534nd'
+      );
+      setStatus('success');
+      formRef.current.reset();
     } catch {
       setStatus('error');
     }
