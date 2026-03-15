@@ -6,7 +6,23 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+  'http://localhost:5173',       
+  'https://astonglass-v1.vercel.app',  
+  'https://astonglass.com',       
+  'https://www.astonglass.com',   
+]
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}));
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
@@ -19,6 +35,10 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send', async (req, res) => {
   const { company_name, from_email, message } = req.body;
+
+  if (!company_name || !from_email || !message) {
+    return res.status(400).json({ success: false, error: 'Missing fields' });
+  }
 
   try {
     await transporter.sendMail({
@@ -38,5 +58,8 @@ app.post('/send', async (req, res) => {
     res.status(500).json({ success: false });
   }
 });
+
+
+app.get("/health", (req, res) => res.send("OK"))
 
 app.listen(5000, () => console.log('Server running on port 5000'));
