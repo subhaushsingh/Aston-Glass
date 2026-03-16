@@ -17,7 +17,9 @@ export default function Map() {
               <div className="space-y-4 text-gray-800">
                 <div className="flex items-start">
                   <span className="text-red-500 text-xl mr-4 mt-1">🕒</span>
-                  <p><strong>Working Hours:</strong><br/> Monday - Saturday: 9:00 AM - 6:00 PM </p>
+                  <p><strong>Working Hours:</strong><br/> FACTORY : Monday - Saturday: 8:00 AM - 8:00 PM </p>
+                  <span className="text-red-500 text-xl mr-4 mt-1">🕒</span>
+                  <p><strong>Working Hours:</strong><br/> OFFICE : Monday - Saturday: 10:00 AM - 6:00 PM </p>
                 </div>
               </div>
             </div>
