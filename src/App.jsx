@@ -11,23 +11,22 @@ import Footer from './components/Footer'
 
 function Splash() {
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-zinc-950 flex flex-col items-center justify-center">
       
-      {/* Logo */}
-      <div className="w-20 h-20 bg-cyan-500 rounded-md rotate-45 flex items-center justify-center animate-pulse"
-        style={{ boxShadow: '0 0 60px rgba(6,182,212,0.8), 0 0 120px rgba(6,182,212,0.4)' }}>
-        <div className="w-10 h-10 bg-slate-900 rounded-sm" />
+     {/* Logo (Clean Corporate Version) */}
+      <div className="flex items-center justify-center h-20 w-auto">
+        <img 
+          src="/BIS LOGO AGPL website.png"  // Assuming you put it in the public folder and named it logo.png
+          alt="Aston Glass Pvt. Ltd. Logo" 
+          className="object-contain h-30 w-auto"  // Sizes image without distortion
+        />
       </div>
 
-      {/* Brand name */}
-      <p className="text-white font-bold tracking-widest uppercase text-lg mt-8">
-        Aston Glass
-      </p>
 
       {/* Loading bar */}
-      <div className="w-36 h-0.5 bg-white/10 rounded-full mt-6 overflow-hidden">
+      <div className="w-36 h-1 bg-white/10 rounded-full mt-6 overflow-hidden">
         <div
-          className="h-full bg-cyan-400 rounded-full"
+          className="h-full bg-red-400 rounded-full"
           style={{ animation: 'loadbar 2s ease forwards' }}
         />
       </div>
