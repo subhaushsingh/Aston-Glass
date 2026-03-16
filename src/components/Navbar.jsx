@@ -10,6 +10,7 @@ export default function Navbar() {
             <a href="#about" className="hover:text-red-600 transition duration-300">About Us</a>
             <a href="#capabilities" className="hover:text-red-600 transition duration-300">Capabilities</a>
             <a href="#services" className="hover:text-red-600 transition duration-300">Services</a>
+            <a href="#certifications" className="hover:text-red-600 transition duration-300">Certification</a>
             <a href="#contact" className="hover:text-red-600 transition duration-300">Contact</a>
             <a href="/Aston_Glass_Profile.pdf" download="Aston_Glass_Brochure.pdf" className="hover:text-red-600 transition duration-300"> Download Brochure</a>
           </div>

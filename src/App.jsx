@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Capabilities from './components/Capabilities'
 import Services from './components/Services'
+import Certification from './components/Certification'
 import Contact from './components/Contact'
 import Map from './components/Map'
 import Footer from './components/Footer'
@@ -68,6 +69,7 @@ export default function App() {
       <About />
       <Capabilities />
       <Services />
+      <Certification />
       <Contact />
       <Map />
       <Footer />
