@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div className="w-full lg:w-1/2 relative">
               <div className="absolute inset-0 bg-gray-200 transform translate-x-4 translate-y-4 rounded-2xl"></div>
-              <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" alt="Modern Glass Architecture" className="rounded-2xl shadow-xl relative z-10 border-4 border-white grayscale hover:grayscale-0 transition duration-500" />
+              <img src="/AGPL_Factory.png" alt="Modern Glass Architecture" className="rounded-2xl shadow-xl relative z-10 border-4 border-white " />
             </div>
           </div>
 
