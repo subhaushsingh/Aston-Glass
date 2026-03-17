@@ -24,6 +24,7 @@ export default function Navbar() {
     { label: "About Us", href: "#about" },
     { label: "Capabilities", href: "#capabilities" },
     { label: "Services", href: "#services" },
+    { label: "Certification", href: "#certifications" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -78,7 +79,7 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                className="hover:text-red-500 transition duration-300"
+                className="hover:text-red-600 transition duration-300"
               >
                 {label}
               </a>
@@ -87,7 +88,7 @@ export default function Navbar() {
             <a
               href="/Aston_Glass_Profile.pdf"
               download="Aston_Glass_Brochure.pdf"
-              className="hover:text-red-500 transition duration-300"
+              className="hover:text-red-600 transition duration-300"
             >
               Download Brochure
             </a>
