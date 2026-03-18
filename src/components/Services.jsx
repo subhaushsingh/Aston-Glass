@@ -124,14 +124,14 @@ export default function Services() {
 
           {/* ── Text Content ── */}
           <div className="w-full lg:w-1/2">
-            <span className="text-red-600 font-bold tracking-wider uppercase text-sm mb-2 block">Value-Added Services</span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Complete Processing Solutions</h2>
+            <span className="text-red-600 font-bold tracking-wider uppercase text-sm mb-2 block">Our Services</span>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Integrated Workflow</h2>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              We offer more than just tempering. Our facility is equipped for end-to-end glass processing...
+              Our facility is equipped for end-to-end glass processing...
             </p>
             <ul className="space-y-5">
-              {['CNC Edge Polishing & Beveling', 'Precision Hole Drilling & Routing', 'Frosted & Tinted Processing'].map((service, index) => (
-                <li key={index} className="flex items-center text-gray-800 font-medium bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:border-red-200 transition-all duration-300">
+              {['Fully Computer Numerical Control Cutting','Precision Hole Drilling ','Automatic Glass Edging ','CNC Edge Polishing & Beveling', 'Serigraphy And Machine Printing.','Customized Frosting.','High Precision Tempering Plant','Dedicated Quality Control Room','Safe Packing And Advance Handling Systems'].map((service, index) => (
+                <li key={index} className="flex items-center text-gray-800 font-medium bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:border-red-700 transition-all duration-300">
                   <div className="bg-red-100 p-2 rounded-full mr-4 text-red-600">✓</div>
                   {service}
                 </li>

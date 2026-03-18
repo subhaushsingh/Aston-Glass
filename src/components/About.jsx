@@ -11,7 +11,7 @@ export default function About() {
                 At <strong>Aston Glass Private Limited</strong>, we're passionate about delivering top-notch glass solutions for various applications. Since our inception in 2020, we've established ourselves as leading manufacturers of a wide range of toughened glasses, catering to diverse industries.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our expertise lies in crafting high-quality glasses for chimney organisations, corner serve bathroom accessories, pull-out drawers, tandem boxes, kitchen appliances, and OTG glasses. With in-house capabilities and a professional team, we're equipped to understand and meet our clients' unique needs.
+                Our expertise lies in crafting high-quality Glasses For Household Chimney Organisations, Cooktop Organisations, Corner - Shelf Glasses For Bathroom Accessories, Bottle Pull-Out Glasses, Tandem Box Glasses ,Kitchen Appliances Glasses - OTG, Microwave etc and Even COP and LOP Glasses For Lift Panels and other Customized Glasses. With in-house capabilities and a professional team, we're equipped to understand and meet our clients' unique needs.
               </p>
             </div>
             <div className="w-full lg:w-1/2 relative">
@@ -32,7 +32,7 @@ export default function About() {
               <div className="absolute -right-6 -top-6 text-9xl opacity-10">👁️</div>
               <h3 className="text-3xl font-bold mb-4 text-gray-100">Our Vision</h3>
               <p className="text-gray-300 leading-relaxed relative z-10 text-lg">
-                Our vision is to be a leading provider of glass solutions in India, renowned for our commitment to quality, innovation, and customer satisfaction. We strive to build long-term relationships with our stakeholders, driving growth and success through our passion for glass craftsmanship.
+                Our vision is to become India’s most trusted and technologically advanced brand in tempered and designer glass manufacturing. As a leading provider of comprehensive glass solutions, we set new benchmarks in quality, innovation, and customer satisfaction, striving to build long-term stakeholder relationships and drive mutual growth through our passion for craftsmanship.
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function About() {
                 Why Choose Us?
               </h3>
               <ul className="space-y-5">
-                {['High-quality glass products tailored to your needs', 'Expert team with in-depth knowledge of glass manufacturing', 'State-of-the-art manufacturing facilities in Rajkot, Gujarat', 'Customized solutions with a focus on safety and innovation', 'Timely delivery and excellent customer support'].map((item, index) => (
+                {['High-quality glass products tailored to your needs', 'Expert team with in-depth knowledge of glass manufacturing', 'State-of-the-art manufacturing facilities in Rajkot, Gujarat', 'Customized solutions with a focus on safety and innovation', 'Timely delivery and excellent customer support','Best Level Q.C and 100% Inspection','Every Tests Done On Every Product Before Dispatch.'].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-red-600 mt-0.5 mr-4 text-xl">✔</span>
                     <span className="text-gray-700 font-medium">{item}</span>
