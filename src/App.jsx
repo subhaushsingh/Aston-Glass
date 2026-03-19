@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 import Map from './components/Map';
 import BestProducts from './components/BestProducts';
 import Footer from './components/Footer';
-import PrivacyPolicy from './components/PrivacyPolicy'; 
+import PrivacyPolicy from './components/Privacypolicy'; 
 import TermsAndConditions from './components/TermsAndConditions';
 
 // Splash Screen Component
