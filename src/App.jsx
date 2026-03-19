@@ -12,7 +12,8 @@ import Contact from './components/Contact';
 import Map from './components/Map';
 import BestProducts from './components/BestProducts';
 import Footer from './components/Footer';
-import PrivacyPolicy from './components/PrivacyPolicy'; // <-- Make sure to import this!
+import PrivacyPolicy from './components/PrivacyPolicy'; 
+import TermsAndConditions from './components/TermsAndConditions';
 
 // Splash Screen Component
 function Splash() {
@@ -90,6 +91,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
           </Routes>
         </main>
 

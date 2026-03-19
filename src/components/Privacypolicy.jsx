@@ -84,9 +84,32 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="mb-4">If you have any questions or concerns about this Privacy Policy or how your data is handled, please contact us at:</p>
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <p><strong>Email:</strong> info@astonglass.com <span className="text-gray-400 text-sm ml-2">(Update with actual email)</span></p>
-              <p><strong>Phone:</strong> +91 XXXXX XXXXX <span className="text-gray-400 text-sm ml-2">(Update with actual phone)</span></p>
-              <p><strong>Address:</strong> [Insert Plant/Office Address Here]</p>
+              <p><strong>Email:</strong> inq@astonglass.com </p>
+              <p><strong>Phone:</strong> +91 95120 11163 </p>
+              <div className="space-y-6">
+                <p><strong>Address:</strong> </p>
+  
+  {/* Office */}
+  <div>
+    <h4 className="font-semibold text-red-500 mb-1">Corporate Office</h4>
+    <p className="text-black-400 text-sm leading-relaxed">
+      Nr. Rangoli Hotel, Lohanagar Main Road,<br />
+      Gondal Road, Rajkot - 360004<br />
+      (Gujarat) India.
+    </p>
+  </div>
+
+  {/* Factory */}
+  <div>
+    <h4 className="font-semibold text-red-500 mb-1">Manufacturing Plant</h4>
+    <p className="text-black-400 text-sm leading-relaxed">
+      Laxmi Estate, Survey No. 693, Plot No. 1A,<br />
+      Village: Khambha, Taluka: Lodhika,<br />
+      District: Rajkot - 365650<br />
+      (Gujarat) India.
+    </p>
+  </div>
+</div>
             </div>
           </div>
 
