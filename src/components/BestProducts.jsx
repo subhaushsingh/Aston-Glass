@@ -9,22 +9,22 @@ export default function BestProducts() {
     {
       image: './service.png',
       tag: 'Best Seller',
-      name: 'Ultra-Clear Tempered Glass',
-      desc: 'Maximum clarity with superior impact resistance. Ideal for facades, partitions, and premium interiors.',
+      name: 'Chimney Glass ',
+      desc: 'Premium, heat-resistant glass with custom designer prints and precision finishing, compatible with all chimney models.',
       spec: '4mm – 19mm thickness',
     },
     {
       image: './service.png',
       tag: 'Most Popular',
-      name: 'Frosted Privacy Glass',
-      desc: 'Elegant diffused finish that balances natural light with complete privacy for modern spaces.',
+      name: 'Oven Door Glass',
+      desc: 'Expertly crafted with multi-layer toughened glass for enhanced safety, superior heat insulation, and crystal-clear visibility.',
       spec: 'Custom opacity levels',
     },
     {
       image: './service.png',
-      tag: 'New Arrival',
-      name: 'Tinted Solar Glass',
-      desc: 'Reduce heat and glare while maintaining outward visibility. Energy-efficient and architecturally refined.',
+      tag: 'Most Popular',
+      name: 'Microwave Door Glass:',
+      desc: 'Durable, high-strength glass with high-quality ceramic printing, designed for clear visibility, robust shock resistance, and long-lasting performance.',
       spec: 'Bronze · Grey · Blue · Green',
     },
   ];
@@ -77,7 +77,7 @@ export default function BestProducts() {
             </h2>
           </div>
           <p className="text-gray-500 max-w-sm text-base leading-relaxed">
-            Precision-engineered glass solutions trusted by architects, contractors, and designers across the region.
+            Precision-Home And Kitchen Appliances Glasse solutions trusted by major OEM across the region.
           </p>
         </div>
 

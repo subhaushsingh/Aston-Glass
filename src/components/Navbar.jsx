@@ -1,10 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom"; // Added routing hooks
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  // Navigation hooks
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +32,28 @@ export default function Navbar() {
     { label: "Certification", href: "#certifications" },
     { label: "Contact", href: "#contact" },
   ];
+
+  // Custom function to handle all section link clicks
+  const handleNavClick = (e, href) => {
+    e.preventDefault(); // Stop standard anchor link behavior
+    setMenuOpen(false); // Close mobile menu if open
+
+    const targetId = href.replace("#", "");
+
+    if (location.pathname !== "/") {
+      // 1. If not on homepage, go home first
+      navigate("/");
+      // 2. Wait slightly for the page to render, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      // 3. If already on homepage, just scroll smoothly
+      const element = document.getElementById(targetId);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -64,14 +91,18 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
-          {/* Logo */}
-          <a href="#home" className="flex items-center">
+          {/* Logo - modified to act as a proper React Router link to Home */}
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
+            className="flex items-center"
+          >
             <img
               src="/BIS LOGO AGPL website.png"
               alt="AGPL Astron Glass Logo"
               className="h-12 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8 font-medium">
@@ -79,12 +110,14 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                className="hover:text-red-600 transition duration-300"
+                onClick={(e) => handleNavClick(e, href)}
+                className="hover:text-red-600 cursor-pointer transition duration-300"
               >
                 {label}
               </a>
             ))}
 
+            {/* Brochure download stays exactly the same, as it downloads a file */}
             <a
               href="/Aston_Glass_Profile.pdf"
               download="Aston_Glass_Brochure.pdf"
@@ -97,7 +130,8 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href="#contact"
-            className="hidden md:inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg shadow-red-600/30 hover:shadow-red-700/50 transform hover:-translate-y-0.5"
+            onClick={(e) => handleNavClick(e, "#contact")}
+            className="hidden md:inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-lg shadow-red-600/30 hover:shadow-red-700/50 transform hover:-translate-y-0.5 cursor-pointer"
           >
             Get a Quote
           </a>
@@ -123,7 +157,7 @@ export default function Navbar() {
                 <a
                   key={href}
                   href={href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, href)}
                   className="py-3 px-3 rounded-lg font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200"
                 >
                   {label}
@@ -142,7 +176,7 @@ export default function Navbar() {
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <a
                   href="#contact"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, "#contact")}
                   className="block text-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-md shadow-red-600/30"
                 >
                   Get a Quote

@@ -1,19 +1,23 @@
-import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Capabilities from './components/Capabilities'
-import Services from './components/Services'
-import Certification from './components/Certification'
-import Contact from './components/Contact'
-import Map from './components/Map'
-import BestProducts from './components/BestProducts'
-import Footer from './components/Footer'
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Component Imports
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Capabilities from './components/Capabilities';
+import Services from './components/Services';
+import Certification from './components/Certification';
+import Contact from './components/Contact';
+import Map from './components/Map';
+import BestProducts from './components/BestProducts';
+import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy'; // <-- Make sure to import this!
+
+// Splash Screen Component
 function Splash() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center relative">
-
       {/* Logo */}
       <div className="flex items-center justify-center">
         <img
@@ -38,30 +42,14 @@ function Splash() {
           100% { width: 100% }
         }
       `}</style>
-
     </div>
-  )
+  );
 }
 
-export default function App() {
-  const [ready, setReady] = useState(false)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setReady(true)
-      setTimeout(() => setVisible(true), 50)
-    }, 1600)
-  }, [])
-
-  if (!ready) return <Splash />
-
+// Home Component: Groups all your landing page sections together
+function Home() {
   return (
-    <div
-      className={`bg-gray-50 text-gray-800 antialiased transition-opacity duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}
-      style={{ fontFamily: "'Outfit', sans-serif" }}
-    >
-      <Navbar />
+    <>
       <Hero />
       <About />
       <Capabilities />
@@ -70,7 +58,44 @@ export default function App() {
       <Certification />
       <Contact />
       <Map />
-      <Footer />
-    </div>
-  )
+    </>
+  );
+}
+
+// Main App Component
+export default function App() {
+  const [ready, setReady] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setReady(true);
+      setTimeout(() => setVisible(true), 50);
+    }, 1600);
+  }, []);
+
+  if (!ready) return <Splash />;
+
+  return (
+    <BrowserRouter>
+      <div
+        className={`flex flex-col min-h-screen bg-gray-50 text-gray-800 antialiased transition-opacity duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}
+        style={{ fontFamily: "'Outfit', sans-serif" }}
+      >
+        {/* Navbar stays at the top of every page */}
+        <Navbar />
+        
+        {/* Main content area that swaps out based on the URL */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          </Routes>
+        </main>
+
+        {/* Footer stays at the bottom of every page */}
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }

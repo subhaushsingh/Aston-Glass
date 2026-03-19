@@ -30,7 +30,7 @@ export default function Map() {
               <iframe
                 title="Factory Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.857441357508!2d70.74142012458749!3d22.130311998195936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958350001e0230f%3A0xf0cfc7017ddccf79!2sAston%20Glass%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1773507176445!5m2!1sen!2sin"
-                className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 pointer-events-none"
+                className="w-full h-full group-hover:grayscale-0 transition-all duration-700 pointer-events-none"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -42,7 +42,7 @@ export default function Map() {
                 href="https://maps.app.goo.gl/r63Dsx9ArsbWdChY8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute inset-0 z-10 bg-gray-900/10 group-hover:bg-gray-900/40 transition-colors flex items-center justify-center cursor-pointer"
+                className="absolute inset-0 z-10  group-hover:bg-gray-900/40 transition-colors flex items-center justify-center cursor-pointer"
               >
                 <span className="bg-red-600 text-white font-bold py-3 px-8 rounded-full shadow-2xl transform translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 flex items-center gap-2">
                   <span>📍</span> Open in Google Maps

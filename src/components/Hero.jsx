@@ -16,6 +16,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="#about" className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-red-600/30 hover:-translate-y-1">Our Story</a>
           <a href="#contact" className="bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:-translate-y-1">Contact Sales</a>
+          <a href="/Aston_Glass_Profile.pdf" download="Aston_Glass_Brochure.pdf" className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-red-600/30 hover:-translate-y-1">Download Brochure</a>
         </div>
       </div>
     </header>
