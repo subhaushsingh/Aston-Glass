@@ -37,9 +37,9 @@ export default function TermsAndConditions() {
               Quotations and Orders
             </h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>All quotations provided are valid for a period of 15 days unless otherwise specified in writing.</li>
+              <li>All quotations provided are valid for a period of 7 days unless otherwise specified in writing.</li>
               <li>An order is only considered accepted once confirmed by us in writing and accompanied by the agreed-upon advance payment.</li>
-              <li>Because our tempered and designer glass products are custom-manufactured to client specifications, orders cannot be canceled or modified once the cutting and tempering process has commenced.</li>
+              <li>Because our tempered and designer glass products are custom-manufactured to client specifications, orders cannot be canceled or modified once the workorder has been generated.</li>
             </ul>
           </div>
 
@@ -94,7 +94,7 @@ export default function TermsAndConditions() {
               Governing Law and Jurisdiction
             </h2>
             <p>
-              These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms, or any business transactions with Aston Glass Private Limited, shall be subject to the exclusive jurisdiction of the courts located in West Bengal, India.
+              These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms, or any business transactions with Aston Glass Private Limited, shall be subject to the exclusive jurisdiction of the courts located in Rajkot, India.
             </p>
           </div>
 
