@@ -6,9 +6,10 @@ import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
+// Updated to use your actual uploaded images to prevent broken links
 const PRODUCTS = [
   {
-    image: './service.png',
+    image: './chemney.png',
     tag: 'Best Seller',
     name: 'Chimney Glass',
     desc: 'Premium, heat-resistant glass with custom designer prints and precision finishing, compatible with all chimney models.',
@@ -22,7 +23,7 @@ const PRODUCTS = [
     spec: 'Custom opacity levels',
   },
   {
-    image: './service.png',
+    image: './microwave.png',
     tag: 'Most Popular',
     name: 'Microwave Door Glass',
     desc: 'Durable, high-strength glass with high-quality ceramic printing, designed for clear visibility, robust shock resistance, and long-lasting performance.',
@@ -30,42 +31,38 @@ const PRODUCTS = [
   },
 ];
 
-// ── Replace image paths and descriptions with your own content ──
+
+// Removed the broken service.png entries and mapped to your exact uploads
 const GALLERY = [
   {
-    image: './service.png',
-    name: 'Chimney Glass — Designer Series',
-    description: 'Engineered to withstand sustained high temperatures, our Chimney Glass range combines robust heat resistance with elegant custom screen-printed patterns. Every pane is precision-cut for a seamless fit across all major chimney brands, meeting international safety standards for both residential and commercial kitchens.',
+    image: '/1.png',
+    name: 'Flood Light Glasses:',
+    description: 'Premium toughened flood light glass—engineered for maximum clarity and extreme durability.',
+  },
+  {
+    image: '/2.png',
+    name: 'Custom Printed Glass:',
+    description: 'Bespoke designs for OEMs, featuring personalized branding, intricate patterns, and high-impact graphics.',
+  },
+  {
+    image: '/3.png',
+    name: 'COP and LOP Glasses:',
+    description: 'Specialized toughened glasses designed for lift panels, ensuring safety and lasting durability.',
   },
   {
     image: './service.png',
-    name: 'Oven Door Glass — Multi-Layer',
-    description: 'Our multi-layer toughened oven glass delivers superior thermal insulation while maintaining crystal-clear visibility into the cooking chamber. Rated for continuous temperatures up to 500°C, each panel features a smooth, easy-clean surface with an optional anti-fingerprint coating for effortless daily maintenance.',
+    name: 'Corner Shelf :',
+    description: 'Perfect for maximizing corner spaces, adding a touch of elegance to your decor.',
   },
   {
     image: './service.png',
-    name: 'Microwave Door Glass — Ceramic Print',
-    description: 'Crafted with high-durability ceramic printing, this glass retains its design integrity through years of daily use. It is precisely engineered for optimal microwave signal transparency while blocking harmful radiation, and is available in a range of tints — Bronze, Grey, Blue, and Forest Green — to suit any appliance palette.',
+    name: ' Straight Shelf:',
+    description: ' Ideal for showcasing your favorite items, crafted for a sturdy and sleek look.',
   },
   {
-    image: './service.png',
-    name: 'Refrigerator Door Glass — Frost-Free',
-    description: 'Treated to resist condensation and frost build-up, our refrigerator glass incorporates a low-emissivity coating that maintains consistent internal temperatures for improved energy efficiency. Available in clear, tinted, and frosted finishes, each panel is precision-bevelled for seamless integration with door gaskets and frame systems.',
-  },
-  {
-    image: './service.png',
-    name: 'Washing Machine Glass — Impact Grade',
-    description: 'Rated for the high-vibration demands of drum washing, this impact-grade tempered glass maintains optical clarity across all wash cycles. A chemical-resistant seal at the frame joint prevents moisture ingress, and each panel is produced in standard and custom diameters to fit front-load models across every major brand.',
-  },
-  {
-    image: './service.png',
-    name: 'Hob & Cooktop Glass — Ceramic',
-    description: 'Our ultra-flat ceramic cooktop glass ensures even heat distribution across all burner zones while standing up to rapid thermal shock. The custom print-ready surface supports decorative burner markings and brand graphics, and is certified for induction, gas-on-glass, and electric radiant heating elements.',
-  },
-  {
-    image: './service.png',
-    name: 'Air Fryer & Small Appliance Glass',
-    description: 'Precision-cut for the growing small appliance segment, this lightweight tempered glass offers high optical clarity so users can monitor cooking at a glance. Heat-resistant up to 300°C and suitable for air fryers, toaster ovens, and steamers, it reduces overall appliance weight without compromising structural strength.',
+    image: '/6.png',
+    name: 'Bottle Pull Out Glass:',
+    description: 'Add a touch of sophistication with our grey tinted toughened glass, perfect for kitchen or bar areas.',
   },
 ];
 
@@ -112,12 +109,6 @@ export default function BestProducts() {
                       box-shadow 0.5s ease, border-color 0.5s ease,
                       opacity 0.5s ease, filter 0.5s ease;
         }
-        .gallery-card:hover .gallery-overlay {
-          opacity: 1 !important;
-        }
-        .gallery-overlay {
-          transition: opacity 0.4s ease;
-        }
         .progress-bar-fill {
           transition: width 0.5s cubic-bezier(0.33,1,0.68,1);
         }
@@ -142,17 +133,20 @@ export default function BestProducts() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PRODUCTS.map((product, index) => (
             <div key={index} className="product-card bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-              <div className="relative overflow-hidden aspect-[4/3]" onClick={() => setLightbox(product)}>
-                <img src={product.image} alt={product.name} className="product-img w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+              
+              {/* FIXED: Changed to object-contain with flex centering so tall/wide images never crop */}
+              <div className="relative overflow-hidden aspect-[4/3] bg-white flex items-center justify-center p-6" onClick={() => setLightbox(product)}>
+                <img src={product.image} alt={product.name} className="product-img max-w-full max-h-full object-contain" />
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/5 transition-all duration-300 flex items-center justify-center cursor-pointer">
                   <span className="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white/90 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow">
                     View Image
                   </span>
                 </div>
-                <span className="tag-pill absolute top-3 left-3 bg-white/80 text-red-600 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-red-100">
+                <span className="tag-pill absolute top-3 left-3 bg-white/80 text-red-600 text-xs font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-red-100 shadow-sm">
                   {product.tag}
                 </span>
               </div>
+
               <div className="p-6">
                 <h3 className="text-lg font-extrabold text-gray-900 mb-2">{product.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{product.desc}</p>
@@ -206,42 +200,20 @@ export default function BestProducts() {
                 <SwiperSlide key={index}>
                   {({ isActive }) => (
                     <div
-                      className={`gallery-card relative rounded-3xl overflow-hidden border-2
+                      className={`gallery-card relative rounded-3xl overflow-hidden border-2 bg-white
                         ${isActive
                           ? 'border-red-500 opacity-100 shadow-2xl'
                           : 'border-white/30 opacity-35 blur-[2px]'
                         }`}
                     >
-                      {/* Image */}
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full aspect-[16/9] object-cover"
-                      />
-
-                      {/* Gradient overlay — always visible on active, hover on inactive */}
-                      <div
-                        className={`gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent
-                          ${isActive ? 'opacity-100' : 'opacity-0'}`}
-                      />
-
-                      {/* Text — only on active */}
-                      {isActive && (
-                        <div className="absolute bottom-0 left-0 right-0 px-7 py-6">
-                          {/* Slide counter */}
-                          <span className="text-xs font-bold text-red-400 uppercase tracking-widest mb-2 block">
-                            {String(activeIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-                          </span>
-                          {/* Title */}
-                          <h4 className="text-white text-xl font-extrabold mb-2 leading-snug">
-                            {item.name}
-                          </h4>
-                          {/* Description */}
-                          <p className="text-white/80 text-sm leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
-                      )}
+                      {/* Image Container */}
+                      <div className="w-full aspect-[16/9] flex items-center justify-center p-6">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
 
                       {/* Active ring */}
                       {isActive && (
@@ -253,8 +225,23 @@ export default function BestProducts() {
               ))}
             </Swiper>
 
+            {/* Separate Text Block below the Carousel for Mobile Optimization */}
+            {GALLERY[activeIndex] && (
+              <div className="text-center max-w-2xl mx-auto mb-10 mt-[-20px] px-6">
+                <span className="text-xs font-bold text-red-600 uppercase tracking-widest mb-2 block">
+                  {String(activeIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+                </span>
+                <h4 className="text-gray-900 text-2xl font-extrabold mb-2 leading-snug">
+                  {GALLERY[activeIndex].name}
+                </h4>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {GALLERY[activeIndex].description}
+                </p>
+              </div>
+            )}
+
             {/* Controls */}
-            <div className="mt-2 flex items-center justify-center gap-6 px-4">
+            <div className="flex items-center justify-center gap-6 px-4">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="w-10 h-10 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300 text-lg"
@@ -292,9 +279,14 @@ export default function BestProducts() {
           >
             <button
               onClick={() => setLightbox(null)}
-              className="absolute top-3 right-3 z-10 w-8 h-8 bg-white/90 hover:bg-red-600 hover:text-white text-gray-700 rounded-full flex items-center justify-center shadow transition-all duration-200 text-lg font-bold"
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-white hover:bg-red-600 hover:text-white text-gray-700 rounded-full flex items-center justify-center shadow-md transition-all duration-200 text-lg font-bold"
             >×</button>
-            <img src={lightbox.image} alt={lightbox.name} className="w-full object-cover max-h-[60vh]" />
+            
+            {/* FIXED: Changed to object-contain with a subtle background so the pop-up doesn't stretch or crop */}
+            <div className="bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">
+               <img src={lightbox.image} alt={lightbox.name} className="max-w-full max-h-[50vh] object-contain" />
+            </div>
+
             <div className="p-6">
               <span className="text-red-600 text-xs font-bold uppercase tracking-wider">{lightbox.tag}</span>
               <h3 className="text-xl font-extrabold text-gray-900 mt-1 mb-2">{lightbox.name}</h3>
