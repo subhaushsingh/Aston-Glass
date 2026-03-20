@@ -120,7 +120,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
             </Routes>
           </main>
           <Footer />
