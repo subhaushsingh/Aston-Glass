@@ -13,21 +13,21 @@ const PRODUCTS = [
     tag: 'Best Seller',
     name: 'Chimney Glass',
     desc: 'Premium, heat-resistant glass with custom designer prints and precision finishing, compatible with all chimney models.',
-    spec: '4mm – 19mm thickness',
+    spec: '4mm-5mm thickness',
   },
   {
     image: './service.png',
     tag: 'Most Popular',
     name: 'Oven Door Glass',
     desc: 'Expertly crafted with multi-layer toughened glass for enhanced safety, superior heat insulation, and crystal-clear visibility.',
-    spec: 'Custom opacity levels',
+    spec: 'Clear,Tinted,Reflective',
   },
   {
     image: './microwave.png',
     tag: 'Most Popular',
     name: 'Microwave Door Glass',
     desc: 'Durable, high-strength glass with high-quality ceramic printing, designed for clear visibility, robust shock resistance, and long-lasting performance.',
-    spec: 'Bronze · Grey · Blue · Green',
+    spec: '4 mm thickness',
   },
 ];
 
@@ -50,12 +50,12 @@ const GALLERY = [
     description: 'Specialized toughened glasses designed for lift panels, ensuring safety and lasting durability.',
   },
   {
-    image: './service.png',
+    image: './4.png',
     name: 'Corner Shelf :',
     description: 'Perfect for maximizing corner spaces, adding a touch of elegance to your decor.',
   },
   {
-    image: './service.png',
+    image: './5.png',
     name: ' Straight Shelf:',
     description: ' Ideal for showcasing your favorite items, crafted for a sturdy and sleek look.',
   },
@@ -200,7 +200,14 @@ export default function BestProducts() {
                 <SwiperSlide key={index}>
                   {({ isActive }) => (
                     <div
-                      className={`gallery-card relative rounded-3xl overflow-hidden border-2 bg-white
+                      onClick={() => setLightbox({ 
+                        image: item.image, 
+                        name: item.name, 
+                        desc: item.description, 
+                        tag: 'Gallery', 
+                        
+                      })}
+                      className={`gallery-card relative rounded-3xl overflow-hidden border-2 bg-white cursor-pointer
                         ${isActive
                           ? 'border-red-500 opacity-100 shadow-2xl'
                           : 'border-white/30 opacity-35 blur-[2px]'

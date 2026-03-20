@@ -14,6 +14,7 @@ import BestProducts from './components/BestProducts';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/Policy';
 import TermsAndConditions from './components/TermsAndConditions';
+import ProductPage from './components/ProductPage'; // <-- ADDED: Import the new Product page
 
 // Splash Screen Component
 function Splash() {
@@ -118,9 +119,13 @@ export default function App() {
           <Navbar />
           <main className="flex-grow">
             <Routes>
+              {/* Existing Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+              
+              {/* ADDED: New Product Page Route */}
+              <Route path="/products" element={<ProductPage />} />
             </Routes>
           </main>
           <Footer />

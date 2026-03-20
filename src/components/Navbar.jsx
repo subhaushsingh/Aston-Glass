@@ -116,15 +116,13 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
-
-            {/* Brochure download stays exactly the same, as it downloads a file */}
-            <a
-              href="/Aston_Glass_Profile.pdf"
-              download="Aston_Glass_Brochure.pdf"
-              className="hover:text-red-600 transition duration-300"
+            {/* PRODUCTS */}
+            <Link 
+              to="/products" 
+              className="hover:text-red-600 cursor-pointer transition duration-300"
             >
-              Download Brochure
-            </a>
+              Products
+            </Link>
           </div>
 
           {/* CTA */}
