@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { target: 2000, suffix: "+", label: "Our Customers", format: "plain" },
   { target: 100000, suffix: "+ pcs", label: "Glass Supplied", format: "indian" },
-  { target: 32800, suffix: " Sq. Ft.", label: "Manufacturing Footprint", format: "comma" },
+  { target: 32800, suffix: " +Sq. Ft.", label: "Manufacturing Footprint", format: "comma" },
   { target: 6, suffix: "yr+", label: "Years of Experience", format: "plain" },
 ];
 

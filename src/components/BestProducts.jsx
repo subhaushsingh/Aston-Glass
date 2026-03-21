@@ -1,4 +1,5 @@
 "use client";
+import { Link } from 'react-router-dom';
 
 import { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,7 +17,7 @@ const PRODUCTS = [
     spec: '4mm-5mm thickness',
   },
   {
-    image: './service.png',
+    image: './oven.png',
     tag: 'Most Popular',
     name: 'Oven Door Glass',
     desc: 'Expertly crafted with multi-layer toughened glass for enhanced safety, superior heat insulation, and crystal-clear visibility.',
@@ -154,12 +155,12 @@ export default function BestProducts() {
                   <span className="text-xs font-semibold text-gray-400 bg-gray-100 px-3 py-1 rounded-full">
                     {product.spec}
                   </span>
-                  <button
-                    onClick={() => setLightbox(product)}
+                  <Link
+                    to="/products"
                     className="text-red-600 text-sm font-bold hover:underline transition"
                   >
                     Learn more →
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ const PRODUCT_CATALOG = [
   {
     id: 'oven',
     name: 'Oven Door Glass',
-    image: '/service.png',
+    image: '/oven.png',
     tag: 'Kitchen Appliance',
     description: 'Expertly crafted with multi-layer toughened glass for enhanced safety, superior heat insulation, and crystal-clear visibility.',
     details: 'Designed specifically to handle extreme thermal shock. The multi-layer construction traps heat inside the oven cavity for maximum energy efficiency while keeping the exterior safe to the touch. Ensures crystal-clear visibility to monitor baking without opening the door.',
