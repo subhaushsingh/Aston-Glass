@@ -153,6 +153,14 @@ export default function Navbar() {
               >
                 Products
               </Link>
+              <a
+                  href="/Aston_Glass_Profile.pdf"
+                  download="Aston_Glass_Brochure.pdf"
+                  onClick={() => setMenuOpen(false)}
+                  className="py-3 px-3 rounded-lg font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200 block"
+                >
+                  Download Brochure
+                </a>
 
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <a

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <header id="home" className="relative bg-gray-900 text-white text-center py-40 px-6 min-h-screen flex items-center justify-center">
@@ -11,12 +12,17 @@ export default function Hero() {
           INNOVATION IN <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-gray-400"> EVERY PIECE.</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
-          Delivering high-strength, safety-certified architectural and Home Appliences glass solutions with state-of-the-art tempering technology since 2020.
+          Delivering High-Strength, Safety-Certified Architectural And Home Appliences Glass Solutions With State-Of-The-Art Tempering Technology Since 2020.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="#about" className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-red-600/30 hover:-translate-y-1">Our Story</a>
-          <a href="#contact" className="bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:-translate-y-1">Contact Sales</a>
-          <a href="/Aston_Glass_Profile.pdf" download="Aston_Glass_Brochure.pdf" className="bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:-translate-y-1">Download Brochure</a>
+          <a href="#about" className="bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:-translate-y-1">Our Story</a>
+          <a href="#contact" className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-lg font-bold transition-all shadow-lg shadow-red-600/30 hover:-translate-y-1">Contact Sales</a>
+          <Link 
+            to="/products" 
+            className="bg-transparent border border-gray-400 hover:border-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition-all hover:-translate-y-1"
+          >
+            View Products
+          </Link>
         </div>
       </div>
     </header>
