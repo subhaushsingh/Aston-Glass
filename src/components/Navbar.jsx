@@ -1,25 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom"; // Added routing hooks
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
-  // Navigation hooks
+
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.35) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > window.innerHeight * 0.35);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,23 +27,19 @@ export default function Navbar() {
     { label: "Contact", href: "#contact" },
   ];
 
-  // Custom function to handle all section link clicks
   const handleNavClick = (e, href) => {
-    e.preventDefault(); // Stop standard anchor link behavior
-    setMenuOpen(false); // Close mobile menu if open
+    e.preventDefault();
+    setMenuOpen(false);
 
     const targetId = href.replace("#", "");
 
     if (location.pathname !== "/") {
-      // 1. If not on homepage, go home first
       navigate("/");
-      // 2. Wait slightly for the page to render, then scroll
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) element.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
-      // 3. If already on homepage, just scroll smoothly
       const element = document.getElementById(targetId);
       if (element) element.scrollIntoView({ behavior: "smooth" });
     }
@@ -62,11 +52,9 @@ export default function Navbar() {
           from { opacity: 0; transform: translateY(-8px); }
           to { opacity: 1; transform: translateY(0); }
         }
-
         .mobile-menu {
           animation: slideDown 0.25s cubic-bezier(0.33,1,0.68,1) both;
         }
-
         .hamburger-line {
           display: block;
           width: 22px;
@@ -75,7 +63,6 @@ export default function Navbar() {
           border-radius: 2px;
           transition: transform 0.3s ease, opacity 0.3s ease;
         }
-
         .open .line1 { transform: translateY(7px) rotate(45deg); }
         .open .line2 { opacity: 0; }
         .open .line3 { transform: translateY(-7px) rotate(-45deg); }
@@ -83,18 +70,14 @@ export default function Navbar() {
 
       <nav
         className={`fixed w-full z-50 transition-all duration-500 backdrop-blur-xl
-        ${
-          scrolled
-            ? "bg-gray-200/60 text-gray-900"
-            : "bg-transparent text-white"
-        }`}
+        ${scrolled ? "bg-gray-200/60 text-gray-900" : "bg-transparent text-white"}`}
       >
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
-          {/* Logo - modified to act as a proper React Router link to Home */}
-          <Link 
-            to="/" 
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
+          {/* Logo */}
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center"
           >
             <img
@@ -116,9 +99,8 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
-            {/* PRODUCTS */}
-            <Link 
-              to="/products" 
+            <Link
+              to="/products"
               className="hover:text-red-600 cursor-pointer transition duration-300"
             >
               Products
@@ -144,13 +126,14 @@ export default function Navbar() {
             <span className="hamburger-line line2" />
             <span className="hamburger-line line3" />
           </button>
-
         </div>
 
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="mobile-menu md:hidden bg-white backdrop-blur-md border-t border-gray-100 shadow-lg">
             <div className="px-6 py-4 flex flex-col gap-1">
+
+              {/* Section links */}
               {links.map(({ label, href }) => (
                 <a
                   key={href}
@@ -162,14 +145,14 @@ export default function Navbar() {
                 </a>
               ))}
 
-              <a
-                href="/Aston_Glass_Profile.pdf"
-                download="Aston_Glass_Brochure.pdf"
+              {/* Products — matches desktop */}
+              <Link
+                to="/products"
                 onClick={() => setMenuOpen(false)}
                 className="py-3 px-3 rounded-lg font-medium text-gray-700 hover:text-red-600 hover:bg-red-50 transition-all duration-200"
               >
-                Download Brochure
-              </a>
+                Products
+              </Link>
 
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <a
