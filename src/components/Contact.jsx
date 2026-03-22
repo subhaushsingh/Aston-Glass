@@ -55,11 +55,9 @@ export default function Contact() {
                 <span className="text-red-500 text-xl mr-4 mt-1">💬</span>
                 <p><strong>WhatsApp:</strong><br />
                   <a href="https://wa.me/919512011163" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 95120 11163</a><br />
-                   <a href="https://wa.me/9735253111" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 97352 53111</a>
+                  <a href="https://wa.me/9735253111" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 97352 53111</a>
                 </p>
               </div>
-               
-              
               <div className="flex items-start">
                 <span className="text-red-500 text-xl mr-4 mt-1">✉️</span>
                 <p><strong>Email:</strong><br />
@@ -93,6 +91,20 @@ export default function Contact() {
                   />
                 </div>
               </div>
+
+              {/* NEW: Phone Number field */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1">
+                  Phone Number <span className="text-gray-500 font-normal">(Optional)</span>
+                </label>
+                <input
+                  type="tel"
+                  name="phone_number"
+                  className="w-full bg-gray-800/50 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition placeholder-gray-500"
+                  placeholder="+91 98765 43210"
+                />
+              </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1">Project Details & Specifications</label>
                 <textarea
