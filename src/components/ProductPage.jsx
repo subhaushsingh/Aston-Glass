@@ -73,7 +73,16 @@ const PRODUCT_CATALOG = [
     tag: 'Interior & Decor',
     description: 'Add a touch of sophistication with our grey tinted toughened glass, perfect for kitchen or bar areas.',
     details: 'Specifically designed for modern modular kitchen cabinetry. The elegant grey tint conceals clutter while adding a contemporary vibe. Highly resistant to scratches from bottles and jars, making it a durable and luxurious upgrade for your pull-out pantries and bar organizers.',
+  },
+  {
+    id: 'rolling-shutter',
+    name: 'Rolling Shutter Glass',
+    image: '/7.png',
+    tag: 'Interior & Decor',
+    description: 'Premium toughened glass rolling shutters combining maximum security with sleek modern design. Available in clear or black-tinted finishes.',
+    details: 'Upgrade your kitchen cabinets with our premium toughened glass rolling shutters. Built for safety and durability, they easily withstand heat, moisture, and daily wear. Available in clear or black-tinted finishes to showcase dishware or stylishly conceal appliances.',
   }
+
 ];
 
 export default function ProductPage() {
