@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
     <p className="text-black-400 text-sm leading-relaxed">
       Laxmi Estate, Survey No. 693, Plot No. 1A,<br />
       Village: Khambha, Taluka: Lodhika,<br />
-      District: Rajkot - 365650<br />
+      District: Rajkot - 360311<br />
       (Gujarat) India.
     </p>
   </div>

@@ -10,7 +10,7 @@ const SERVICES = [
   'High Precision Tempering Plant',
   'Dedicated Quality Control Room',
   'Safe Packing And Advance Handling Systems',
-  'Laminated & Toughened Glass Assembly',
+  'Real-Time Tracking Of Daily Production',
 ];
 
 const left = SERVICES.slice(0, Math.ceil(SERVICES.length / 2));

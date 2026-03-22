@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { target: 2000, suffix: "+", label: "Our Customers", format: "plain" },
-  { target: 100000, suffix: "+ pcs", label: "Glass Supplied", format: "indian" },
-  { target: 32800, suffix: " Sq. Ft.", label: "Manufacturing Footprint", format: "comma" },
   { target: 6, suffix: "yr+", label: "Years of Experience", format: "plain" },
+  { target: 32800, suffix: " +Sq. Ft.", label: "Manufacturing Footprint", format: "comma" },
+  { target: 10000, suffix: " +Sq. MT.", label: "Production Capacity / per month", format: "comma" },
+  { target: 50, suffix: "+", label: "Man Power", format: "plain" },
+  
 ];
 
 function formatNumber(value, format) {

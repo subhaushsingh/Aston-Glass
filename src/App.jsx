@@ -14,7 +14,7 @@ import BestProducts from './components/BestProducts';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/Policy';
 import TermsAndConditions from './components/TermsAndConditions';
-import ProductPage from './components/ProductPage'; // <-- ADDED: Import the new Product page
+import ProductPage from './components/ProductPage';
 
 // Splash Screen Component
 function Splash() {
@@ -24,7 +24,7 @@ function Splash() {
         <img
           src="/loading_img.jpg"
           alt="Aston Glass Pvt. Ltd. Logo"
-          className="object-contain h-40 w-auto"
+          className="object-contain h-120 w-auto"
         />
       </div>
       <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-36 h-1 bg-gray-300/50 rounded-full overflow-hidden">
@@ -48,6 +48,19 @@ function Splash() {
 function FloatingButtons() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+
+      {/* Download Brochure */}
+      <a
+        href="/Aston_Glass_Profile.pdf"
+        download="Aston_Glass_Brochure.pdf"
+        aria-label="Download Brochure"
+        className="group w-13 h-13 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+        style={{ width: '52px', height: '52px' }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="white" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+      </a>
 
       {/* Phone */}
       <a
