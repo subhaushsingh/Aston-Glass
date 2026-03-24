@@ -48,14 +48,14 @@ export default function Contact() {
                 <span className="text-red-500 text-xl mr-4 mt-1">📞</span>
                 <p><strong>Phone:</strong><br />
                   <a href="tel:+919512011163" className="text-pink-400 hover:text-red-500 transition-colors">+91 95120 11163</a><br />
-                  <a href="tel:+919735253111" className="text-pink-400 hover:text-red-500 transition-colors">+91 97352 53111</a>
+                 
                 </p>
               </div>
               <div className="flex items-start">
                 <span className="text-red-500 text-xl mr-4 mt-1">💬</span>
                 <p><strong>WhatsApp:</strong><br />
                   <a href="https://wa.me/919512011163" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 95120 11163</a><br />
-                  <a href="https://wa.me/9735253111" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-red-500 transition-colors">+91 97352 53111</a>
+                  
                 </p>
               </div>
               <div className="flex items-start">

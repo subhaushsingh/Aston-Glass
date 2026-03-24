@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="bg-slate-950 text-white/70 py-8 border-t border-gray-900">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         
-        <p className="font-light">&copy; {new Date().getFullYear()} Aston Glass Pvt Ltd. All rights reserved.</p>
+        <p className="font-light">&copy; {new Date().getFullYear()} Aston Glass Pvt Ltd. All rights reserved. | D & Dev by Kunal & Subh.</p>
         
         {/* 2. Add your Legal Links using <Link to="..."> */}
         <div className="flex space-x-6 text-sm">
